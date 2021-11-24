@@ -3,5 +3,11 @@ import ReactDOM from 'react-dom';
 
 import './index.css';
 import App from './App';
+import {AuthStoreProvider} from './store/auth-store';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <AuthStoreProvider>
+    <App />
+  </AuthStoreProvider>,
+  document.getElementById('root')
+);
